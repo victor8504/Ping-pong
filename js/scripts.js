@@ -22,18 +22,18 @@ function pingpong(num) {
 };
 
 //front-end
-// $(document).ready(function() {
-//   $("form#blank").submit(function(event) {
-//
-//     event.preventDefault();
-//     $('#output').empty();
-//
-//     var result = parseInt($("input#no").val());
-//     var number = pingpong(result);
-//     // console.log(number);
-//
-//     number.forEach(function(e) {
-//       $("#output").append($("<li>").html(e));
-//     });
-//   });
-// }); 
+$(document).ready(function() {
+  $("form#blank").submit(function(event) {
+
+    event.preventDefault();
+    $('#output').empty();
+
+    var result = parseInt($("input#no").val());
+    var number = pingpong(result);
+    // console.log(number);
+
+    number.forEach(function(e) {
+      $("#output").append($("<li>").html(e));
+    });
+  });
+}); 
