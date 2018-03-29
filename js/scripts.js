@@ -1,31 +1,39 @@
-//back-end
-function pingpong(i){
-  var numbers
-if (i%3===0 && i%5===0){
-  return "pingpong"
-  }
-else if(i%3===0){
-  return "ping"
-  }
-else if(i%5===0){
-  return "pong"
-  }
-else{
-  return i
-  }
-}
-
-//front-end
-$(document).ready(function(){
-$("form#ping-form").submit(function(event){
-
-  event.preventDefault();
-
-  $("ul.ping_list").empty();
-  var num=parseInt($("input#num").val());
-  for(var i=1; i<=num; i+=1){
-    $("ul.ping_list").append("<li>"+pingpong(i)+"</li>");
-  }
-});
-});
- 
+// //back-end
+// function pingpong(num) {
+//   var number = [];
+//   for (var x = 1; x <= num; x++) {
+//
+//     if (x % 3 === 0) {
+//       number.push('ping');
+//
+//     } else if (x % 5 === 0) {
+//       number.push('pong');
+//
+//     } else if ((x % 5 === 0) && (x % 3 === 0)) {
+//       number.push('pingpong');
+//
+//     } else {
+//       number.push(x);
+//
+//     }
+//
+//   };
+//   return number;
+// };
+//
+// //front-end
+// $(document).ready(function() {
+//   $("form#blank").submit(function(event) {
+//
+//     event.preventDefault();
+//     $('#output').empty();
+//
+//     var result = parseInt($("input#no").val());
+//     var number = pingpong(result);
+//     // console.log(number);
+//
+//     number.forEach(function(e) {
+//       $("#output").append($("<li>").html(e));
+//     });
+//   });
+// }); 
