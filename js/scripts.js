@@ -1,24 +1,24 @@
 //back-end
 function pingpong(num) {
-  var number = [];
+  var funNumber = [];
   for (var x = 1; x <= num; x++) {
 
     if (x % 3 === 0) {
-      number.push('ping');
+      funNumber.push('ping');
 
     } else if (x % 5 === 0) {
-      number.push('pong');
+      funNumber.push('pong');
 
     } else if ((x % 5 === 0) && (x % 3 === 0)) {
-      number.push('pingpong');
+      funNumber.push('pingpong');
 
     } else {
-      number.push(x);
+      funNumber.push(x);
 
     }
 
   };
-  return number;
+  return funNumber;
 };
 
 //front-end
@@ -29,11 +29,11 @@ $(document).ready(function() {
     $('#output').empty();
 
     var result = parseInt($("input#no").val());
-    var number = pingpong(result);
-    // console.log(number);
+    var funNumber = pingpong(result);
+    // console.log(funNumber);
 
-    number.forEach(function(e) {
-      $("#output").append($("<li>").html(e));
+    funNumber.forEach(function(i) {
+      $("#output").append($("<li>").html(i));
     });
   });
 }); 
